@@ -1,0 +1,15 @@
+<ul>
+  <li *ngFor="let item of treeData ; let index = index">
+    <div  class="showIcon">
+      <i class="fa fa-folder" *ngIf='item?.type === "folder"'></i> <i class="fa fa-file"
+        *ngIf='item?.type === "file"'></i>
+      <span> {{ item?.name }} </span>
+      <i class="fa fa-plus hideIcon" aria-hidden="true" *ngIf="item?.type==='folder'" (click)="addchildrenNode(item)"></i>
+      <i class="fa fa-trash hideIcon" aria-hidden="true" (click)='deleteTreeNodes(index)'></i>
+    </div>
+    <ul *ngIf="item?.children">
+      <!-- recursive component -->
+      <app-tree-node [treeData]="item?.children"></app-tree-node>
+    </ul>
+  </li>
+</ul>

@@ -1,0 +1,30 @@
+.hideIcon{
+    display: none;
+}
+
+.showIcon:hover .hideIcon{
+    display: inline-flex;
+}
+
+i{
+    margin: 5px;
+}
+
+button{
+    margin: 5px;
+    border-radius: 5px;
+    background-color: black;
+    color: white;
+}
+
+select{
+    margin: 5px;
+}
+
+.fa.fa-folder{
+    color: rgba(235, 183, 14, 0.952)
+}
+
+.fa.fa-file {
+    color: darkolivegreen(235, 183, 14, 0.952)
+}

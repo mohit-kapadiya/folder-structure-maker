@@ -1,0 +1,39 @@
+button{
+    margin:5px ;
+    border-radius: 5%;
+    background-color: black;
+    color: white;
+    padding: 10px;
+}
+
+textarea{
+    margin-top: 200px;
+}
+
+h1{
+ margin: 10px;;
+ padding: 15px;
+ text-align: center;  
+ background-color:rgb(90, 14, 14);
+ color : white;
+ font-size: 35px;
+ border-radius: 5px;
+}
+
+input{
+    margin: 5px;
+    width: 15%;
+}
+select {
+    margin: 5px;
+    width: 8%;
+}
+
+i{
+    margin: 5px;
+    height: 15%;
+}
+
+.tree{
+   margin-left: 10px;
+}

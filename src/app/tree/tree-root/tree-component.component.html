@@ -1,0 +1,26 @@
+<!-- HEADER  -->
+<h1>FOLDER STRUCTURE MAKER</h1>
+<div class="tree">
+  <button type="button" (click)="addFolderOrFiles()">Add folder to root</button>
+
+  <!-- TreeNodeComponent -->
+  <app-tree-node [treeData]="treeData"></app-tree-node>
+
+<div *ngIf="isShowForm">
+  
+  <!-- Form Start -->
+  <form [formGroup]="treeDataForm">
+      <select formControlName="fileType" *ngIf="oldTreeNode">
+        <option value="folder">folder</option>
+        <option value="file">file</option>
+      </select>
+      <input type="text" formControlName="fileName">
+      <i class="fa fa-plus" aria-hidden="true" (click)="addRootNode()"></i>
+      <i class="fa fa-trash" aria-hidden="true" (click)="hideTreeForm()"></i>
+  </form>
+  <!-- Form End -->
+</div>
+
+  <!-- text area for show json data -->
+  <textarea readonly rows="10" cols="50">{{ treeData | json}}</textarea>
+</div>
